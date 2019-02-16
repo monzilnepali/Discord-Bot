@@ -3,10 +3,12 @@ const client = new Discord.Client();
 
 client.once('ready', () => {
     console.log('Ready!');
+    client.user.setActivity('%help', { type: 'Playing ' });
 
 });
 client.on('message',message=>{
 console.log(message.content);
+    
 
 //checking any mention in message
 check=message.isMemberMentioned(message.member);
