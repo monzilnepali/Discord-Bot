@@ -15,6 +15,7 @@ check=message.isMemberMentioned(message.member);
 console.log(check)
     if(check){
         var mentionedUserId=message.mentions.users.first().id;
+        console.log(mentionedUserId);
          if(mentionedUserId==326160579691806721){
             message.delete();
             // Reply to a message
