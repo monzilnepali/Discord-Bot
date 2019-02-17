@@ -12,7 +12,7 @@ console.log(message.content);
 
 //checking any mention in message
 check=message.isMemberMentioned(message.member);
-console.log(check)
+console.log("mentioned user: ",check);
     if(check){
         var mentionedUserId=message.mentions.users.first().id;
         console.log(mentionedUserId);
