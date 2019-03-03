@@ -14,6 +14,7 @@ console.log(message.content);
 check=message.isMemberMentioned(message.member);
 console.log("mentioned user: ",check);
     if(check){
+      
         var mentionedUserId=message.mentions.users.first().id;
         console.log(mentionedUserId);
          if(mentionedUserId==326160579691806721){
@@ -27,6 +28,7 @@ console.log("mentioned user: ",check);
          }
 
     }else{
+        console.log("mention user not found in message");
         //for other command
         //deathx  command reply all dealth x member as mentioned in message
         // sovin : 436891637080391691, ocen 524962252109905942
