@@ -31,7 +31,7 @@ function botReplytoLapzap(message) {
 
     var mentionedUserId = message.mentions.users.first().id;
     if (mentionedUserId == 326160579691806721) {
-        message.delete();
+       
         // Reply to a message
         //different respond
         var reply;
