@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.once('ready', () => {
     console.log('Ready!');
-    client.user.setActivity('PUBG Smaug Division', { type: 'Playing' });
+    client.user.setActivity('Deathx Protocol', { type: 'Playing' });
 
 });
 
