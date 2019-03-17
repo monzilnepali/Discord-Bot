@@ -48,7 +48,7 @@ client.on('message', message => {
         botReplytoLapzap(message);
     } else {
        
-       botReplytoLapzap(message);
+        botReplayToCommand(message);
     }
 });
 
