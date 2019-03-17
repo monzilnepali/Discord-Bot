@@ -3,9 +3,14 @@ const client = new Discord.Client();
 
 client.once('ready', () => {
     console.log('Ready!');
+<<<<<<< HEAD
     client.user.setActivity('Deathx Protocol', {
         type: 'Playing'
     });
+=======
+    client.user.setActivity('Deathx Protocol', { type: 'Playing' });
+
+>>>>>>> bca689e839dbe1ab51973f231a1b7c71e2e11334
 });
 
 // client.on('voiceStateUpdate', (oldMember, newMember) => {
@@ -55,6 +60,12 @@ function botReplytoLapzap(message) {
     console.log("bot reply called");
     var mentionedUserId = message.mentions.users.first().id;
     if (mentionedUserId == 326160579691806721) {
+<<<<<<< HEAD
+=======
+       
+        // Reply to a message
+        //different respond
+>>>>>>> bca689e839dbe1ab51973f231a1b7c71e2e11334
         var reply;
         console.log(message.content);
         if (message.content.includes("pubg")) {
