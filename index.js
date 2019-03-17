@@ -7,7 +7,7 @@ client.once('ready', () => {
     client.user.setActivity('Deathx Protocol', {
         type: 'Playing'
     });
-
+});
 
 // client.on('voiceStateUpdate', (oldMember, newMember) => {
 //     let newUserChannel = newMember.voiceChannel;
