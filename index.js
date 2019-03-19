@@ -8,20 +8,7 @@ client.once('ready', () => {
         type: 'Playing'
     });
 
-    client.updatePresence({
-        state: 'Playing Squad',
-        details: 'Competitive',
-        startTimestamp: new Date(),
-        largeImageKey: 'deathx',
-        largeImageText:'Deathx',
-        smallImageKey: 'deathx',
-        partyId: 'snek_party',
-        partySize: 1,
-        partyMax: 1,
-        matchSecret: 'slithers',
-        joinSecret: 'boop',
-        spectateSecret: 'sniff',
-      });
+   
 });
 
 // client.on('voiceStateUpdate', (oldMember, newMember) => {
