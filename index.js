@@ -106,18 +106,24 @@ function botReplayToCommand(message) {
             var data=message.content.slice(5);
             var headingIndex=data.search('-h');
             var bodyIndex=data.search('-m');
+            var imageIndex=data.search('-img');
             var headingData=data.slice(headingIndex+2,bodyIndex);
-            var bodyData=data.slice(bodyIndex+2);
+            var bodyData=data.slice(bodyIndex+2,imageIndex);
+            if(imageIndex!=-1){
+            var imagesrc=data.slice(imageIndex+4);
+             }
 
-           // console.log(headingData.replace(/\s/g, ''));//removing white space
-           // console.log(bodyData.replace(/\s/g, ''));
+           if(headingIndex!=-1 && bodyIndex!=-1){
+               // -h -m not found then no reply message
             embed = new Discord.RichEmbed()
                 .setTitle(headingData)
                 .setDescription(bodyData)
                 .setFooter("This message is sent By Lapzap BOT")
                 .setColor("#2ecc71")
+                .setImage(imagesrc)
                 .setTimestamp()
                 message.channel.send(embed);
+           }
 
         }
     }
