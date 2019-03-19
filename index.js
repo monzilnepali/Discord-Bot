@@ -7,6 +7,21 @@ client.once('ready', () => {
     client.user.setActivity('Deathx Protocol', {
         type: 'Playing'
     });
+
+    client.updatePresence({
+        state: 'Playing Squad',
+        details: 'Competitive',
+        startTimestamp: new Date(),
+        largeImageKey: 'deathx',
+        largeImageText:'Deathx',
+        smallImageKey: 'deathx',
+        partyId: 'snek_party',
+        partySize: 1,
+        partyMax: 1,
+        matchSecret: 'slithers',
+        joinSecret: 'boop',
+        spectateSecret: 'sniff',
+      });
 });
 
 // client.on('voiceStateUpdate', (oldMember, newMember) => {
@@ -89,7 +104,7 @@ function botReplayToCommand(message) {
                 .setColor("#ff6f00")
                 .setTimestamp(new Date())
             message.channel.send(embed);
-        } else if ((message.content == '%help')) {
+        } else if ((message.content.includes('%help'))) {
             embed = new Discord.RichEmbed()
                 .setTitle("Lapzap Bot Commands List:")
                 .setDescription("1. %deathx: To assemble Deathx Team member \t\t \n\n" +
@@ -98,6 +113,25 @@ function botReplayToCommand(message) {
                 .setFooter("This message is sent By Lapzap BOT")
                 .setColor("#ff6f00")
             message.channel.send(embed);
+        }else if((message.content.includes('%send'))){
+            //message.delete();
+              console.log("send command");
+            var data=message.content.slice(5);
+            var headingIndex=data.search('-h');
+            var bodyIndex=data.search('-m');
+            var headingData=data.slice(headingIndex+2,bodyIndex);
+            var bodyData=data.slice(bodyIndex+2);
+
+           // console.log(headingData.replace(/\s/g, ''));//removing white space
+           // console.log(bodyData.replace(/\s/g, ''));
+            embed = new Discord.RichEmbed()
+                .setTitle(headingData)
+                .setDescription(bodyData)
+                .setFooter("This message is sent By Lapzap BOT")
+                .setColor("#2ecc71")
+                .setTimestamp()
+                message.channel.send(embed);
+
         }
     }
 }
