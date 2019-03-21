@@ -84,11 +84,12 @@ function botReplayToCommand(message) {
             // Reply to a message
             msg = `${client.users.get("399078227898925076")}${client.users.get("436891637080391691")} ${client.users.get("524962252109905942")}    \n\n let\'s Play PUBG LITE`;
             embed = new Discord.RichEmbed()
-                .setTitle("Deathx Assemble")
-                .setDescription(msg)
-                .setImage("https://cdn.discordapp.com/attachments/538318861565427712/546246616290557952/pubg-hope-maxi-poster-1.156.jpg")
-                .setFooter("This message is sent By Lapzap BOT")
-                .setColor("#ff6f00")
+            .setAuthor(message.author.username,message.author.avatarURL)
+            .setTitle("Deathx Assemble")
+            .setDescription(msg)
+            .setImage("https://i.ibb.co/vQmssBf/deathx-assemble.jpg")
+            .setFooter("This message is sent By Lapzap BOT")
+            .setColor("#2ecc71")
                 .setTimestamp(new Date())
             message.channel.send(embed);
         } else if ((message.content.includes('%help'))) {
