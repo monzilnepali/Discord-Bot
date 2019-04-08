@@ -39,7 +39,7 @@ client.on('message', message => {
     console.log("check"+check);
     if (typeof check !== 'undefined'){
               console.log("author name:",message.author.username);
-              message.author.send("hello wolrd");
+              //message.author.send("hello wolrd");
         // var Count;
         // for (Count in client.users.array()) {
         //     var User = client.users.array()[Count];
