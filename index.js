@@ -89,7 +89,7 @@ function botReplayToCommand(message) {
             .setDescription(msg)
             .setImage("https://i.ibb.co/vQmssBf/deathx-assemble.jpg")
             .setFooter("This message is sent By Lapzap BOT")
-            .setColor("#2ecc71")
+            .setColor("#00a6d2")
                 .setTimestamp(new Date())
             message.channel.send(embed);
         } else if ((message.content.includes('%help'))) {
@@ -99,7 +99,7 @@ function botReplayToCommand(message) {
                     "2. %help: show list of Commands\t\t \n\n ")
                 .setThumbnail("https://cdn.discordapp.com/attachments/538318861565427712/538320096633028608/deathx.jpg")
                 .setFooter("This message is sent By Lapzap BOT")
-                .setColor("#ff6f00")
+                .setColor("#00a6d2")
             message.channel.send(embed);
         }else if((message.content.includes('%send'))){
             //message.delete();
@@ -120,7 +120,7 @@ function botReplayToCommand(message) {
                 .setTitle(headingData)
                 .setDescription(bodyData)
                 .setFooter("This message is sent By Lapzap BOT")
-                .setColor("#2ecc71")
+                .setColor("#00a6d2")
                 .setImage(imagesrc)
                 .setTimestamp()
                 message.channel.send(embed);
