@@ -121,6 +121,7 @@ function botReplayToCommand(message) {
                 .setDescription(bodyData)
                 .setFooter("This message is sent By Lapzap BOT")
                 .setColor("#00a6d2")
+                .setThumbnail("https://cdn.discordapp.com/app-icons/546184203570774017/5a239b585729c099ea72d642c189baeb.png")
                 .setImage(imagesrc)
                 .setTimestamp()
                 message.channel.send(embed);
