@@ -12,24 +12,12 @@ client.once('ready', () => {
 });
 
 client.on('guildMemberAdd', member => {
-    // Send the message to a designated channel on a server:
-    const channel = member.guild.channels.find(ch => ch.name === 'general-chat');
-    // Do nothing if the channel wasn't found on this server
-    if (!channel) return;
-    // Send the message, mentioning the member
-    console.log("new user");
-     console.log(`$(member.guild.name)`);
-    embed = new Discord.RichEmbed()
-                .setAuthor("Welcome to"+ `$(event.guild.name)`)
-                .setTitle("Please be sure to read our rules carefully thanks")
-                .setDescription("Please enjoy your stay"+ `$(event.user.mention)`)
-                .setFooter("This message is sent By Lapzap BOT")
-                .setColor("#2ecc71")
-                .setTimestamp()
-                channel.send(embed);
-
-    
-
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find(ch => ch.name === 'general-chat');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`Welcome to the DeathX Protocol , ${member}`);
 });
 
 // client.on('voiceStateUpdate', (oldMember, newMember) => {
