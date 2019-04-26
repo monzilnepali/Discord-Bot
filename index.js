@@ -11,24 +11,22 @@ client.once('ready', () => {
    
 });
 
-var msg=new Array();
-msg.push("${member} just joined the server ");
-msg.push("${member} joined your party. ");
-msg.push("${member} We were expecting you ( ͡° ͜ʖ ͡°) .");
-msg.push("${member} Leave your weapons by the door.");
-msg.push("${member} just landed.");
-
-
-
 client.on('guildMemberAdd', member => {
     // Send the message to a designated channel on a server:
     const channel = member.guild.channels.find(ch => ch.name === 'general-chat');
     // Do nothing if the channel wasn't found on this server
     if (!channel) return;
     // Send the message, mentioning the member
-    var i=Math.floor(Math.random() * 5);   
-    channel.send(msg[i]);
-    console.log("new user");
+    
+    embed = new Discord.RichEmbed()
+                .setAuthor(`Welcome to $(event.guild.name)`)
+                .setTitle("Please be sure to read our rules carefully thanks")
+                .setDescription("Please enjoy your stay $(event.user.mention)")
+                .setFooter("This message is sent By Lapzap BOT")
+                .setColor("#2ecc71")
+                .setThumbnail("$(event.user.avatar)")
+                .setTimestamp()
+                message.channel.send(embed);
     
 
 });
