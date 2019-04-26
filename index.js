@@ -11,6 +11,27 @@ client.once('ready', () => {
    
 });
 
+var msg=new Array();
+msg.push("${member} just joined the server ");
+msg.push("${member} joined your party. ");
+msg.push("${member} We were expecting you ( ͡° ͜ʖ ͡°) .");
+msg.push("${member} Leave your weapons by the door.");
+msg.push("${member} just landed.");
+
+
+
+client.on('guildMemberAdd', member => {
+    // Send the message to a designated channel on a server:
+    const channel = member.guild.channels.find(ch => ch.name === 'general-chat');
+    // Do nothing if the channel wasn't found on this server
+    if (!channel) return;
+    // Send the message, mentioning the member
+    var i=Math.floor(Math.random() * 5);   
+    channel.send(msg[i]);
+    
+
+});
+
 // client.on('voiceStateUpdate', (oldMember, newMember) => {
 //     let newUserChannel = newMember.voiceChannel;
 //     let oldUserChannel = oldMember.voiceChannel;
