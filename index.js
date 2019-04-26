@@ -28,6 +28,7 @@ client.on('guildMemberAdd', member => {
     // Send the message, mentioning the member
     var i=Math.floor(Math.random() * 5);   
     channel.send(msg[i]);
+    console.log("new user");
     
 
 });
