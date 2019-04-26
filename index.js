@@ -26,7 +26,7 @@ client.on('guildMemberAdd', member => {
                 .setColor("#2ecc71")
                 .setThumbnail("$(event.user.avatar)")
                 .setTimestamp()
-                message.channel.send(embed);
+                channel.send(embed);
     
 
 });
