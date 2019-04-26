@@ -17,7 +17,7 @@ client.on('guildMemberAdd', member => {
     // Do nothing if the channel wasn't found on this server
     if (!channel) return;
     // Send the message, mentioning the member
-    
+    console.log("new user");
     embed = new Discord.RichEmbed()
                 .setAuthor(`Welcome to $(event.guild.name)`)
                 .setTitle("Please be sure to read our rules carefully thanks")
