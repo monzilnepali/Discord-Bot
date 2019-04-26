@@ -18,7 +18,7 @@ client.on('guildMemberAdd', member => {
     if (!channel) return;
     // Send the message, mentioning the member
     console.log("new user");
-     console.log(`$(event.guild.name)`);
+     console.log(`$(member.guild.name)`);
     embed = new Discord.RichEmbed()
                 .setAuthor("Welcome to"+ `$(event.guild.name)`)
                 .setTitle("Please be sure to read our rules carefully thanks")
