@@ -19,13 +19,14 @@ client.on('guildMemberAdd', member => {
     // Send the message, mentioning the member
     console.log("new user");
     embed = new Discord.RichEmbed()
-                .setAuthor(`Welcome to $(event.guild.name)`)
+                .setAuthor("Welcome to"+ `$(event.guild.name)`)
                 .setTitle("Please be sure to read our rules carefully thanks")
-                .setDescription("Please enjoy your stay $(event.user.mention)")
+                .setDescription("Please enjoy your stay"+ `$(event.user.mention)`)
                 .setFooter("This message is sent By Lapzap BOT")
                 .setColor("#2ecc71")
+                .setThumbnail(`$(event.user.avatar)`)
                 .setTimestamp()
-                channel.send(embed);
+                message.channel.send(embed);
 
     
 
