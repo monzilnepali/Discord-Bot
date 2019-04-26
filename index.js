@@ -24,7 +24,6 @@ client.on('guildMemberAdd', member => {
                 .setDescription("Please enjoy your stay"+ `$(event.user.mention)`)
                 .setFooter("This message is sent By Lapzap BOT")
                 .setColor("#2ecc71")
-                .setThumbnail(`$(event.user.avatar)`)
                 .setTimestamp()
                 channel.send(embed);
 
