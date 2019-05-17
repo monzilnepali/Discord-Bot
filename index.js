@@ -70,7 +70,7 @@ function botReplytoLapzap(message) {
 
         var reply;
         console.log(message.content);
-        var data=JSON.parse(msg.json);
+        var data=JSON.parse('https://api.myjson.com/bins/yq80e');
         console('msg from json file is \n'+data[0].msg)
         if (message.content.includes("pubg")) {
             //reading json file
