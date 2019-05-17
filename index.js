@@ -70,10 +70,11 @@ function botReplytoLapzap(message) {
 
         var reply;
         console.log(message.content);
+        var data=JSON.parse('msg.json');
+        console('msg from json file is \n'+data.msg)
         if (message.content.includes("pubg")) {
             //reading json file
-            var data=JSON.parse('msg.json');
-            console('msg from json file is \n'+data.msg)
+           
             console.log("pubg text found in message");
             reply = ' :wave: Hi this is me Lapzap Bot. Your message has been send to Lapzap, wait for reply. Have nice day';
         } else {
