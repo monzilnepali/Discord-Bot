@@ -113,7 +113,7 @@ function botReplayToCommand(message) {
                 .setColor("#00a6d2")
             message.channel.send(embed);
         }else if((message.content.includes('%send'))){
-            //message.delete();
+            message.delete();
               console.log("send command");
             var data=message.content.slice(5);
             var headingIndex=data.search('-h');
