@@ -142,4 +142,4 @@ function botReplayToCommand(message) {
     }
 }
 
-client.login("NTQ2MTg0MjAzNTcwNzc0MDE3.D0kqkQ.H795wLBGHbYfalEdExFjjpVaYXY");
+client.login(process.env.BOT_TOKEN);
